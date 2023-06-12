@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "flaticon_aovis";
+    src: url("./flaticon_aovis.ttf?e8cc409e8f2572ae866be69faa60b492") format("truetype"),
+url("./flaticon_aovis.woff?e8cc409e8f2572ae866be69faa60b492") format("woff"),
+url("./flaticon_aovis.woff2?e8cc409e8f2572ae866be69faa60b492") format("woff2"),
+url("./flaticon_aovis.eot?e8cc409e8f2572ae866be69faa60b492#iefix") format("embedded-opentype"),
+url("./flaticon_aovis.svg?e8cc409e8f2572ae866be69faa60b492#flaticon_aovis") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_aovis !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-film-roll:before {
+    content: "\f101";
+}
+.flaticon-carnival-mask:before {
+    content: "\f102";
+}
+.flaticon-prize:before {
+    content: "\f103";
+}
+.flaticon-comedy:before {
+    content: "\f104";
+}
+.flaticon-tag:before {
+    content: "\f105";
+}
+.flaticon-time:before {
+    content: "\f106";
+}
+.flaticon-quotes:before {
+    content: "\f107";
+}
+.flaticon-clapperboard:before {
+    content: "\f108";
+}
+.flaticon-film:before {
+    content: "\f109";
+}
+.flaticon-video-camera:before {
+    content: "\f10a";
+}
+.flaticon-ribbon:before {
+    content: "\f10b";
+}
+.flaticon-trophy:before {
+    content: "\f10c";
+}
+.flaticon-director:before {
+    content: "\f10d";
+}
+.flaticon-user:before {
+    content: "\f10e";
+}
+.flaticon-badge:before {
+    content: "\f10f";
+}
+.flaticon-clipper:before {
+    content: "\f110";
+}
+.flaticon-movie-ticket:before {
+    content: "\f111";
+}
+.flaticon-clapperboard-1:before {
+    content: "\f112";
+}
+.flaticon-location:before {
+    content: "\f113";
+}
+.flaticon-call:before {
+    content: "\f114";
+}
+.flaticon-contact-us:before {
+    content: "\f115";
+}

@@ -1,0 +1,396 @@
+// Booking
+.mb_booking_detail {
+	.ova_row {
+		display: flex;
+		margin-bottom: 10px;
+
+		input::placeholder {
+			opacity: 0.5;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		> label {
+			strong {
+				display: inline-block;
+    			min-width: 150px;
+			}
+
+			input, select {
+				min-width: 177px;
+				min-height: 30px;
+			}
+		}
+
+		span.select2 {
+			min-width: 177px;
+			min-height: 30px;
+
+			.selection {
+				.select2-selection {
+					&.select2-selection--single {
+						height: 30px;
+
+						.select2-selection__rendered {
+							line-height: 30px;
+							height: 30px;
+
+							.select2-selection__placeholder {
+								opacity: 0.5;
+							}
+						}
+					}
+					&.select2-selection--multiple {
+						.select2-search.select2-search--inline {
+							.select2-search__field::placeholder {
+								opacity: 0.5;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.mb_seats {			
+			.seats {
+				display: inline-block;
+
+				.mb-checkbox {
+					display: inline-block;
+					position: relative;
+					padding-left: 25px;
+					margin: 0 10px 10px 0;
+					cursor: pointer;
+					font-size: 14px;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					user-select: none;
+
+					&:hover {
+						input ~ .checkmark {
+							background-color: #ccc;
+						}
+					}
+
+					input {
+						position: absolute;
+						opacity: 0;
+						cursor: pointer;
+
+						&:checked ~ .checkmark {
+							background-color: #2196F3;
+						}
+
+						&:checked ~ .checkmark:after {
+							display: block;
+						}
+					}
+
+					.checkmark {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 20px;
+						width: 20px;
+						background-color: #eee;
+						border-radius: 50%;
+
+						&:after {
+							content: "";
+							position: absolute;
+							display: none;
+						    top: 7px;
+						    left: 7px;
+						    width: 6px;
+						    height: 6px;
+							border-radius: 50%;
+							background-color: white;
+						}
+					}
+				}
+
+				.no-seat {
+					font-size: 14px;
+					line-height: 2;
+    				color: #2c3338;
+					padding: 0 24px 0 8px;
+				}
+			}
+		}
+
+		&.mb_cart {
+			.cart-detail {
+				width: 360px;
+			    background-color: #fff;
+			    border: 1px solid #ccd0d4;
+			    box-shadow: 0 1px 4px rgb(0 0 0 / 15%);
+			    padding: 10px 20px;
+			    border-radius: 5px;
+
+			    .cart-info {
+			    	.mb-price {
+			    		font-size: 14px;
+	    				font-weight: 600;
+			    	}
+
+			    	.cart-header {
+			    		display: flex;
+    					justify-content: space-between;
+    					border-bottom: 1px dashed #bbb;
+    					padding: 7px 0 12px 0;
+
+    					span {
+    						font-size: 14px;
+						    line-height: 22px;
+						    color: #666;
+						    font-weight: 600;
+    					}
+			    	}
+
+			    	.cart-item {
+			    		display: flex;
+			    		justify-content: space-between;
+			    		padding: 12px 0 30px 0;
+
+			    		.seat {
+			    			span {
+			    				font-size: 14px;
+							    line-height: 22px;
+							    color: #90ba3e;
+
+							    &:not(:last-child) {
+							    	&:after {
+							    		content: "|";
+    									padding: 0 5px;
+							    	}
+							    }
+			    			}
+			    		}
+			    	}
+
+			    	.cart-fee {
+		    		    display: flex;
+					    justify-content: space-between;
+					    padding-bottom: 10px;
+
+					    p {
+					    	margin: 0;
+						    font-size: 14px;
+						    line-height: 22px;
+						    color: #666;
+					    }
+
+					    &.total-tax, &.total-ticket-fee {
+					    	border-top: 1px dashed #bbb;
+    						padding: 10px 0 5px 0;
+					    }
+
+					    &.cart-total {
+					    	border-top: 1px dashed #bbb;
+					    	padding: 10px 0 5px 0;
+
+					    	.text, .total-number {
+					    		font-size: 14px;
+					    		font-weight: bold;
+					    	}
+					    }
+
+					    &.total-discount {
+					    	p {
+					    		color: #e86c60;
+					    	}
+					    }
+			    	}
+			    }
+
+			    .cart-discount {
+			    	display: flex;
+			    	margin-top: 10px;
+			    	justify-content: space-between;
+
+			    	.cart-input-discount {
+			    		position: relative;
+			    		width: 100%;
+			    		margin-right: 5px;
+
+			    		input {
+			    			height: 30px;
+			    			width: 100%;
+			    		}
+
+			    		.mb-loading {
+			    			display: none;
+						    position: absolute;
+						    top: 50%;
+						    right: 5px;
+						    margin-top: -10px;
+			    		}
+			    	}
+
+			    	button {
+			    		height: 30px;
+		    		    min-width: 60px;
+					    border-radius: 4px;
+					    border: 1px solid #8c8f94;
+					    background-color: #FFF;
+					    cursor: pointer;
+			    	}
+			    }
+			}
+		}
+
+		&.mb_create_ticket {
+			display: none;
+			margin-top: 10px;
+			align-items: center;
+
+			.create-ticket {
+				display: block;
+				font-size: 13px;
+				line-height: 1;
+			    background-color: #2271B1;
+			    color: #FFFFFF;
+			    padding: 10px;
+			    margin-right: 5px;
+			    border-radius: 4px;
+			    border: 1px solid #2271B1;
+			    box-sizing: border-box;
+			    text-align: center;
+				box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+				-o-transition: all 0.3s ease;
+				-ms-transition: all 0.3s ease;
+				-webkit-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+
+				&:hover {
+					background-color: #135E96;
+					border-color: #135E96;
+				}
+			}
+
+			.msg {
+				display: none;
+				font-style: italic;
+
+				&.mb-success {
+					color: #00A32A;
+				}
+
+				&.mb-error {
+					color: #D63638;
+				}
+			}
+		}
+	}
+
+	.mb-error {
+		display: none;
+
+		&.mb-error-discount {
+			margin-top: 10px;
+		}
+		
+		span {
+			font-size: 14px;
+			font-style: italic;
+			color: red;
+		}
+	}
+}
+
+// Admin
+.wp-admin {
+	&.mb_booking_page_booking_statistics {
+		.notice-warning {
+			display: none;
+		}
+
+		.mb-booking-statistics {
+			.booking-statistics {
+				background-color: #FFFFFF;
+			    overflow: hidden;
+			    margin: 0 0 16px;
+			    padding: 24px;
+			    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+			    color: #555;
+			    text-align: left;
+
+				.filter-booking-statistics {
+				    display: flex;
+		    		flex-wrap: wrap;
+
+		    		select, input {
+		    			width: 200px !important;
+		    			height: 30px !important;
+		    			min-height: 30px;
+		    			padding: 0 8px !important;
+		    			margin-bottom: 20px;
+		    		}
+
+		    		select {
+		    			margin-right: 10px;
+		    		}
+
+		    		.datepicker-showtimes-filter {
+		    			max-width: 100%;
+		    			margin-right: 10px;
+		    		}
+				}
+
+				.booking-statistics-submit {
+					display: flex;
+					align-items: center;
+
+					.button {
+						margin-right: 5px;
+					}
+				}
+
+				.booking-total {
+					display: grid;
+					grid-template-columns: repeat(auto-fill, 300px);
+					grid-gap: 30px;
+					margin-top: 20px;
+
+					.total-box {
+						padding: 20px 30px;
+						color: #FFFFFF;
+						overflow: auto;
+
+						label {
+							font-size: 18px;
+							font-weight: 400;
+							line-height: 1em;
+						}
+
+						.price {
+							font-size: 48px;
+							font-weight: 400;
+							line-height: 1.2em;
+
+							.woocommerce-Price-currencySymbol {
+								font-size: 35px;
+							}
+						}
+
+						&.subtotal {
+							background-color: #0070F0;
+						}
+						&.discount {
+							background-color: #CB2F00;
+						}
+						&.tax, &.ticket-fee {
+							background-color: #DBC200;
+						}
+						&.total {
+							background-color: #004E98;
+						}
+					}
+				}
+			}
+		}
+	}
+}
